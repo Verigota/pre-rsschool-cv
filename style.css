@@ -20,19 +20,42 @@ footer {
     margin-right: 10px;
 }
 
+h2::before { 
+    display: block; 
+    content: " "; 
+    margin-top: -62px; 
+    height: 62px; 
+    visibility: hidden; 
+    pointer-events: none;
+  }
+
+.nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
 .nav li {
-    display: inline;
-    margin: 0 2em;
+    white-space: nowrap;
+    margin: 0;
     list-style-type: none;
     border: 3px solid black;
     border-radius: 3rem;
-    padding: 3px;
+    padding: 3px 10px;
+    background-color: white;
+    box-shadow:  10px 5px 5px rgba(0, 0, 255, .2);
 }
 
-.nav li a:link,
-.nav li a:visited {
+a:link,
+a:visited {
     text-decoration: none;
     color: black;
+  }
+
+  .nav li:hover {
+    box-shadow: none;
+    background-color: rgba(0, 0, 255, .2);
   }
 
 .nav {
@@ -70,4 +93,43 @@ footer {
 
 .photo {
     border: 3px solid black;
+    margin-top: 3px;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: flex-end;
+}
+
+.skills-list li span {
+    flex-basis: 120px;
+    margin-bottom: -3px;
+}
+
+.skills-list li .skills-bar {
+    background: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.skills-list li .skills-bar .bar {
+    background: grey;
+    height: 4px;
+    border-radius: 4px;
+    text-align: right;
+    font-size: 80%;
+}
+
+.skills-list li:hover .skills-bar .bar {
+    background: black;
+    box-shadow: 0 0 0 1px rgba(0, 0, 255, .2);
+  }
+
+.skill-value {
+    margin-right: -25px;
+}
+
+li {
+    margin-bottom: 10px;
 }
