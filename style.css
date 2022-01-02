@@ -1,15 +1,21 @@
 body {
-    margin: 0;
-}
-.cv {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+.w100 {
+    width: 100%;
+}
+.cv {
+    width: 1400px;
 }
 header {
     height: 50px;
 }
 main {
     display: flex;
+    margin-top: 10px;
 }
 
 footer {
@@ -33,6 +39,7 @@ h2::before {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
+    width: 100%;
     padding: 0;
 }
 
@@ -42,9 +49,12 @@ h2::before {
     list-style-type: none;
     border: 3px solid black;
     border-radius: 3rem;
-    padding: 3px 10px;
     background-color: white;
     box-shadow:  10px 5px 5px rgba(0, 0, 255, .2);
+}
+
+.nav li a {
+    padding: 3px 10px;
 }
 
 a:link,
@@ -59,9 +69,8 @@ a:visited {
   }
 
 .nav {
-    position: fixed;
+    
     background: white;
-    width: 100%;
     margin: 0;
 }
 
@@ -88,12 +97,11 @@ a:visited {
     flex-direction: column;
     background-color: lightgrey;
     border-bottom: 3px solid black;
-    margin-right: 0;
+    margin-right: 10px;
 }
 
 .photo {
     border: 3px solid black;
-    margin-top: 3px;
 }
 
 .skills-list li {
@@ -132,4 +140,24 @@ a:visited {
 
 li {
     margin-bottom: 10px;
+}
+
+.projects-list {
+    display: flex;
+}
+
+.projects-list-item {
+    border: 3px solid black;
+    margin: 10px;
+    padding: 5px;
+}
+
+.contact-list li a:link,
+.contact-list li a:visited {
+    text-decoration: underline;
+}
+
+@media (max-width: 1399px){
+    .cv { width: 100%; }
+    .nav ul { justify-content: flex-start;}
 }
