@@ -1,0 +1,163 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+.w100 {
+    width: 100%;
+}
+.cv {
+    width: 1400px;
+}
+header {
+    height: 50px;
+}
+main {
+    display: flex;
+    margin-top: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+h2::before { 
+    display: block; 
+    content: " "; 
+    margin-top: -62px; 
+    height: 62px; 
+    visibility: hidden; 
+    pointer-events: none;
+  }
+
+.nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+}
+
+.nav li {
+    white-space: nowrap;
+    margin: 0;
+    list-style-type: none;
+    border: 3px solid black;
+    border-radius: 3rem;
+    background-color: white;
+    box-shadow:  10px 5px 5px rgba(0, 0, 255, .2);
+}
+
+.nav li a {
+    padding: 3px 10px;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+  }
+
+  .nav li:hover {
+    box-shadow: none;
+    background-color: rgba(0, 0, 255, .2);
+  }
+
+.nav {
+    
+    background: white;
+    margin: 0;
+}
+
+.column1, .column2 {
+    margin: 10px;
+}
+
+.contact-list {
+    list-style-type: none;  
+}
+
+.column2 {
+    flex-grow: 1;
+}
+
+.section {
+    border-bottom: 3px solid black;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+.column1 {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+    border-bottom: 3px solid black;
+    margin-right: 10px;
+}
+
+.photo {
+    border: 3px solid black;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: flex-end;
+}
+
+.skills-list li span {
+    flex-basis: 120px;
+    margin-bottom: -3px;
+}
+
+.skills-list li .skills-bar {
+    background: white;
+    height: 3px;
+    width: 50%;
+    border-radius: 3px;
+}
+
+.skills-list li .skills-bar .bar {
+    background: grey;
+    height: 4px;
+    border-radius: 4px;
+    text-align: right;
+    font-size: 80%;
+}
+
+.skills-list li:hover .skills-bar .bar {
+    background: black;
+    box-shadow: 0 0 0 1px rgba(0, 0, 255, .2);
+  }
+
+.skill-value {
+    margin-right: -25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.projects-list {
+    display: flex;
+}
+
+.projects-list-item {
+    border: 3px solid black;
+    margin: 10px;
+    padding: 5px;
+}
+
+.contact-list li a:link,
+.contact-list li a:visited {
+    text-decoration: underline;
+}
+
+@media (max-width: 1399px){
+    .cv { width: 100%; }
+    .nav ul { justify-content: flex-start;}
+}
